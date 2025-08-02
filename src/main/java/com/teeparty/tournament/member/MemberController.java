@@ -1,5 +1,6 @@
 package com.teeparty.tournament.member;
 
+import com.teeparty.tournament.tournament.Tournament;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -29,6 +30,12 @@ public class MemberController {
         return memberService.getMemberById(id)
                 .map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
+    }
+
+    @GetMapping("/{memberId}/tournaments")
+    public ResponseEntity<List<Tournament>> getTournamentsForMember(@PathVariable Long memberId) {
+        List<Tournament> tournaments = memberService.getTournamentsForMember(memberId);
+        return ResponseEntity.ok(tournaments);
     }
 
     @GetMapping("/phonenumber/{phoneNumber}")
