@@ -1,6 +1,6 @@
 package com.teeparty.tournament.tournament;
 
-import com.teeparty.tournament.member.Member;
+import com.teeparty.tournament.registration.Registration;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -24,7 +24,9 @@ public class Tournament {
     private BigDecimal prizeAmount;
     private String prizeDescription;
     private BigDecimal entryFee;
-    private List<Member> members;
+
+    @OneToMany(mappedBy = "tournament")
+    private List<Registration> tournamentRegistrations;
     private boolean isCompleted;
 
     public Tournament() {

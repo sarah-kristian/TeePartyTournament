@@ -5,6 +5,7 @@ import com.teeparty.tournament.tournament.Tournament;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -15,5 +16,7 @@ public interface RegistrationRepo extends CrudRepository<Registration, Long> {
 
     boolean existsByMemberAndTournament(Member member, Tournament tournament);
 
+    List<Registration> findByTournamentId(Long tournamentId);
+    List<Registration> findByMemberId(Long memberId);
 }
 
