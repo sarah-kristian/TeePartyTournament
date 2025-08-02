@@ -1,10 +1,8 @@
 package com.teeparty.tournament.tournament;
 
+import com.teeparty.tournament.member.Member;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,9 +17,14 @@ public class TournamentController {
     }
 
     @GetMapping
-    public ResponseEntity<Iterable<Tournament>> getAll() {
+    public ResponseEntity<List<Tournament>> getAll() {
         return ResponseEntity.ok(tournamentService.getAllTournaments());
     }
 
+    @GetMapping("/{tournamentId}/members")
+    public ResponseEntity<List<Member>> getMembersForTournament(@PathVariable Long tournamentId) {
+        List<Member> members = tournamentService.getMembersForTournament(tournamentId);
+        return ResponseEntity.ok(members);
+    }
 
 }
