@@ -1,5 +1,8 @@
 package com.teeparty.tournament.member;
 
+import com.teeparty.tournament.registration.Registration;
+import com.teeparty.tournament.registration.RegistrationRepo;
+import com.teeparty.tournament.tournament.Tournament;
 import com.teeparty.tournament.util.util;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
@@ -11,17 +14,20 @@ import java.time.LocalDateTime;
 
 import java.util.List;
 import java.util.Optional;
-
+import java.util.stream.Collectors;
 
 
 @Service
 public class MemberService {
 
     private final MemberRepo memberRepo;
+    private final RegistrationRepo registrationRepo;
 
-    public MemberService(MemberRepo memberRepo) {
+    public MemberService(MemberRepo memberRepo, RegistrationRepo registrationRepo) {
         this.memberRepo = memberRepo;
+        this.registrationRepo = registrationRepo;
     }
+
 
     public List<Member> getAllMembers(){
         return memberRepo.findAll();
@@ -51,7 +57,12 @@ public class MemberService {
         LocalDateTime parsedDate = util.parseDate(startDate);
         return memberRepo.findMembersByMembershipStartDateBefore(parsedDate);
     }
-
+    public List<Tournament> getTournamentsForMember(Long memberId) {
+        List<Registration> registrations = registrationRepo.findByMemberId(memberId);
+        return registrations.stream()
+                .map(Registration::getTournament)
+                .collect(Collectors.toList());
+    }
     @Transactional
     public Member create(Member member) {
         return memberRepo.save(member);
