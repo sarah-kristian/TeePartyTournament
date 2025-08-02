@@ -45,6 +45,18 @@ public class MemberService {
     public Optional<Member> getMemberByUsername(String username) {
         return memberRepo.findByUsername(username);
     }
+
+    public List<Member> getActiveMembers() {
+        return memberRepo.findAll().stream()
+                .filter(Member::isActiveMember)
+                .collect(Collectors.toList());
+    }
+
+    public List<Member> getExpiredMembers() {
+        return memberRepo.findAll().stream()
+                .filter(Member::isExpiredMember)
+                .collect(Collectors.toList());
+    }
     public List<Member> getMembersByMembershipStartDate(String startDate) {
         LocalDateTime parsedDate = util.parseDate(startDate);
         return memberRepo.findMembersByMembershipStartDate(parsedDate);
@@ -65,6 +77,12 @@ public class MemberService {
     }
     @Transactional
     public Member create(Member member) {
+        if (member.getMembershipStartDate() == null) {
+            member.setMembershipStartDate(LocalDateTime.now());
+        }
+
+        member.setMembershipEndDate(member.getMembershipStartDate().plusYears(1));
+
         return memberRepo.save(member);
     }
 

@@ -69,11 +69,20 @@ public class MemberController {
         return ResponseEntity.ok(memberService.getMembersByMembershipEndDate(endDate));
     }
 
-    @GetMapping("/startdate")
+    @GetMapping("/startdate/before")
     public ResponseEntity<List<Member>> getByMembershipStartDateBefore(@RequestParam String startDate) {
         return ResponseEntity.ok(memberService.getMembersByMembershipStartDateBefore(startDate));
     }
 
+    @GetMapping("/active")
+    public ResponseEntity<List<Member>> getActiveMembers() {
+        return ResponseEntity.ok(memberService.getActiveMembers());
+    }
+
+    @GetMapping("/expired")
+    public ResponseEntity<List<Member>> getExpiredMembers() {
+        return ResponseEntity.ok(memberService.getExpiredMembers());
+    }
     @PostMapping
     public ResponseEntity<Member> create(@RequestBody Member member) {
         Member saved = memberService.create(member);

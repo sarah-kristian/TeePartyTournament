@@ -43,5 +43,14 @@ public class Member {
         Duration duration = Duration.between(membershipStartDate, date);
         return duration.toDays();
     }
+    @PrePersist
+    public void initializeDates() {
+        if (membershipStartDate == null) {
+            membershipStartDate = LocalDateTime.now();
+        }
+        if (membershipEndDate == null) {
+            membershipEndDate = membershipStartDate.plusYears(1);
+        }
+    }
 
 }
