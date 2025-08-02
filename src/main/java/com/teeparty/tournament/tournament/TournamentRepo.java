@@ -11,7 +11,6 @@ import java.util.Optional;
 public interface TournamentRepo extends CrudRepository<Tournament, Long> {
     List<Tournament> findAll();
     Optional<Tournament> findById(long id);
-    Optional<Tournament> findTournamentByRegistration_Id(long registrationId);
     List<Tournament> findTournamentsByStartDate(LocalDateTime startDate);
     List<Tournament> findTournamentsByEndDate(LocalDateTime endDate);
 

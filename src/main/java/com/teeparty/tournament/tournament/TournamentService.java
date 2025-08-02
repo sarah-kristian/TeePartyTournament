@@ -7,6 +7,7 @@ import com.teeparty.tournament.util.util;
 import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -27,9 +28,6 @@ public class TournamentService {
 
     public Optional<Tournament> getTournamentById(long id) {
         return tournamentRepo.findById(id);
-    }
-    public Optional<Tournament> getTournamentByRegistrationId(long membersId) {
-        return tournamentRepo.findTournamentByRegistration_Id(membersId);
     }
 
     public List<Tournament> getTournamentsByLocation(String location) {
@@ -81,6 +79,16 @@ public class TournamentService {
     public boolean delete(Tournament tournament) {
         try {
             tournamentRepo.delete(tournament);
+            return true;
+        } catch (EmptyResultDataAccessException ex) {
+            return false;
+        }
+    }
+
+    @Transactional
+    public boolean deleteTournamentById(long id) {
+        try {
+            tournamentRepo.deleteById(id);
             return true;
         } catch (EmptyResultDataAccessException ex) {
             return false;
