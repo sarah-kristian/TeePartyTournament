@@ -9,6 +9,7 @@ import java.time.LocalDateTime;
 
 @Setter
 @Getter
+
 @Entity
 public class Member {
     @Id
@@ -16,7 +17,7 @@ public class Member {
     @GeneratedValue(generator = "member_sequence", strategy = GenerationType.SEQUENCE)
     private Long id;
     private String username;
-    private String emailAddress;
+    private String email;
     private String phone;
     private LocalDateTime membershipStartDate;
     private LocalDateTime membershipEndDate;
