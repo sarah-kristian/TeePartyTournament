@@ -25,7 +25,7 @@ public class Tournament {
     private String prizeDescription;
     private BigDecimal entryFee;
 
-    @OneToMany(mappedBy = "tournament")
+    @OneToMany(mappedBy = "tournament", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Registration> tournamentRegistrations;
     private boolean isCompleted;
 
