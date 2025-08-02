@@ -39,17 +39,9 @@ public class RegistrationController {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
         }
     }
-    @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteRegistrationById(@PathVariable long id) {
-        boolean success = registrationService.deleteRegistrationById(id);
-        if (success) {
-            return ResponseEntity.noContent().build();
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
-        }
-    }
+
     @PostMapping("/register/{memberId}/{tournamentId}")
-    public ResponseEntity<Registration> registerMemberforTournament(long memberId, long tournamentId) {
+    public ResponseEntity<Registration> registerMemberforTournament(@PathVariable long memberId, @PathVariable long tournamentId) {
 
         Registration registration = registrationService.registerMemberForTournament(memberId, tournamentId);
         URI location = ServletUriComponentsBuilder
@@ -58,5 +50,15 @@ public class RegistrationController {
                 .buildAndExpand(registration.getId())
                 .toUri();
         return ResponseEntity.created(location).body(registration);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteRegistrationById(@PathVariable long id) {
+        boolean success = registrationService.deleteRegistrationById(id);
+        if (success) {
+            return ResponseEntity.noContent().build();
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+        }
     }
 }
