@@ -1,11 +1,14 @@
 package com.teeparty.tournament.member;
 
+import com.teeparty.tournament.registration.Registration;
+
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Setter
 @Getter
@@ -21,6 +24,8 @@ public class Member {
     private String phone;
     private LocalDateTime membershipStartDate;
     private LocalDateTime membershipEndDate;
+    @OneToMany(mappedBy = "member")
+    private List<Registration> registeredTournaments;  // List of tournament registrations
 
 
     public Member() {
