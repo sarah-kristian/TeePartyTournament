@@ -44,7 +44,7 @@ The API supports creating, reading, updating, and deleting members and tournamen
 ## Development and Testing
 
 - This branch supports API testing with **Postman** or other tools (see images below).
-- A <a href="postman/TournamentAPIDemo.postman_test_run.json">>Postman collection</a> is available to test endpoints
+- A <a href="postman/TournamentAPIDemo_postmanCollection.json">Postman collection</a> is available to test endpoints
 
 <p align="center">
   <img src="images/postMember.png" alt="POST test with Postman" width="80%">
@@ -64,7 +64,7 @@ The API supports creating, reading, updating, and deleting members and tournamen
 
 Example collection run:
 <p align="center">
-  <a href="postman/TournamentAPIDemo.postman_test_run.json">
+  <a href="postman/TournamentAPIDemo_postmanCollection.json">
     <img src="images/collection.png" alt="GET test with Postman" width="80%">
   </a>
 </p>
