@@ -1,5 +1,6 @@
 package com.teeparty.tournament.registration;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.teeparty.tournament.member.Member;
 import com.teeparty.tournament.tournament.Tournament;
 
@@ -15,7 +16,7 @@ import java.time.LocalDateTime;
 @Entity
 public class Registration {
     @Id
-    @SequenceGenerator(name = "registration_sequence", sequenceName = "registration_sequence, allocationSize = 1")
+    @SequenceGenerator(name = "registration_sequence", sequenceName = "registration_sequence", allocationSize = 1)
     @GeneratedValue(generator = "registration_sequence", strategy = GenerationType.SEQUENCE)
     private Long id;
 

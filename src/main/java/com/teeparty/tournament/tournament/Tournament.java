@@ -1,5 +1,6 @@
 package com.teeparty.tournament.tournament;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.teeparty.tournament.registration.Registration;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -25,8 +26,6 @@ public class Tournament {
     private String prizeDescription;
     private BigDecimal entryFee;
 
-    @OneToMany(mappedBy = "tournament", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Registration> tournamentRegistrations;
     private boolean isCompleted;
 
     public Tournament() {
