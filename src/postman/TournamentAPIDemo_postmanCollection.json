@@ -1,0 +1,396 @@
+{
+	"id": "e6db432e-1d60-4e14-b1c1-75cee4398213",
+	"name": "Tournament API Demo",
+	"timestamp": "2025-08-02T21:21:07.653Z",
+	"collection_id": "47280461-95c4b455-e6eb-4d98-9fcb-a6a4c3b451cd",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-08-02T21:21:05.997Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "bb329d59-b50b-411a-8d03-230752ca0416",
+			"name": "Create Member: alice",
+			"url": "http://localhost:8080/api/member",
+			"time": 465,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				465
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c07f3418-2bb0-4167-8f0a-15b26e47ee69",
+			"name": "Create Member: bob",
+			"url": "http://localhost:8080/api/member",
+			"time": 12,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cf1633ea-1f8d-4681-a2ed-0e96f9c99aff",
+			"name": "Create Member: carol",
+			"url": "http://localhost:8080/api/member",
+			"time": 8,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				8
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "cdef5680-ceee-4ad2-8ad4-8c6cbd0332e2",
+			"name": "Create Member: dave",
+			"url": "http://localhost:8080/api/member",
+			"time": 12,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "042b11fa-c3a4-4262-8e1a-a141f7e8b08a",
+			"name": "Create Member: eve",
+			"url": "http://localhost:8080/api/member",
+			"time": 12,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				12
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "bd4863f9-2cc7-4c01-a4fa-a0fdb04fb54e",
+			"name": "Create Tournament: Autumn Open",
+			"url": "http://localhost:8080/api/tournament",
+			"time": 50,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				50
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "29a4c0e9-d8f1-4e87-b15f-f5a55d2ec764",
+			"name": "Create Tournament: Winter Classic",
+			"url": "http://localhost:8080/api/tournament",
+			"time": 9,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				9
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "120aeab9-9300-4850-9dbd-9b03692fbb88",
+			"name": "Register Member 1 to Tournament 1",
+			"url": "http://localhost:8080/api/registration/register/1/1",
+			"time": 127,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				127
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "2ca53c0e-be9f-4486-b8ea-dd1986db7202",
+			"name": "Register Member 1 to Tournament 2",
+			"url": "http://localhost:8080/api/registration/register/1/2",
+			"time": 25,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				25
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "7fc93c9b-d578-4e48-913b-3e6b14ab1201",
+			"name": "Register Member 2 to Tournament 1",
+			"url": "http://localhost:8080/api/registration/register/2/1",
+			"time": 25,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				25
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "280b71c4-09c6-48ef-92da-906e59368dcb",
+			"name": "Register Member 2 to Tournament 2",
+			"url": "http://localhost:8080/api/registration/register/2/2",
+			"time": 32,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				32
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "df346c7a-535a-48f4-b978-2716b0eeb663",
+			"name": "Delete Member: Eve",
+			"url": "http://localhost:8080/api/member/5",
+			"time": 31,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				31
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b74079e9-d2b9-41cd-ace6-fbd2a25b458b",
+			"name": "Delete Tournament: Winter Classic",
+			"url": "http://localhost:8080/api/tournament/2",
+			"time": 11,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				11
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f6104ed2-0689-4853-8f71-e9e4615c19b5",
+			"name": "Get All Members",
+			"url": "http://localhost:8080/api/member",
+			"time": 17,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				17
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "997f267b-df86-4753-92f5-12de882dd90b",
+			"name": "Find Member by Username (bob)",
+			"url": "http://localhost:8080/api/member/username/bob",
+			"time": 21,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				21
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0a148d92-ff6e-4546-8565-68cf8987067a",
+			"name": "Find Tournaments for Member 1 (alice)",
+			"url": "http://localhost:8080/api/member/1/tournaments",
+			"time": 16,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				16
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "bf7b4726-49ad-4d91-81d2-246a3135df94",
+			"name": "Get Members for Tournament 1",
+			"url": "http://localhost:8080/api/tournament/1/members",
+			"time": 35,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				35
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 908,
+	"collection": {
+		"requests": [
+			{
+				"id": "bb329d59-b50b-411a-8d03-230752ca0416",
+				"method": "POST"
+			},
+			{
+				"id": "c07f3418-2bb0-4167-8f0a-15b26e47ee69",
+				"method": "POST"
+			},
+			{
+				"id": "cf1633ea-1f8d-4681-a2ed-0e96f9c99aff",
+				"method": "POST"
+			},
+			{
+				"id": "cdef5680-ceee-4ad2-8ad4-8c6cbd0332e2",
+				"method": "POST"
+			},
+			{
+				"id": "042b11fa-c3a4-4262-8e1a-a141f7e8b08a",
+				"method": "POST"
+			},
+			{
+				"id": "bd4863f9-2cc7-4c01-a4fa-a0fdb04fb54e",
+				"method": "POST"
+			},
+			{
+				"id": "29a4c0e9-d8f1-4e87-b15f-f5a55d2ec764",
+				"method": "POST"
+			},
+			{
+				"id": "120aeab9-9300-4850-9dbd-9b03692fbb88",
+				"method": "POST"
+			},
+			{
+				"id": "2ca53c0e-be9f-4486-b8ea-dd1986db7202",
+				"method": "POST"
+			},
+			{
+				"id": "7fc93c9b-d578-4e48-913b-3e6b14ab1201",
+				"method": "POST"
+			},
+			{
+				"id": "280b71c4-09c6-48ef-92da-906e59368dcb",
+				"method": "POST"
+			},
+			{
+				"id": "df346c7a-535a-48f4-b978-2716b0eeb663",
+				"method": "DELETE"
+			},
+			{
+				"id": "b74079e9-d2b9-41cd-ace6-fbd2a25b458b",
+				"method": "DELETE"
+			},
+			{
+				"id": "f6104ed2-0689-4853-8f71-e9e4615c19b5",
+				"method": "GET"
+			},
+			{
+				"id": "997f267b-df86-4753-92f5-12de882dd90b",
+				"method": "GET"
+			},
+			{
+				"id": "0a148d92-ff6e-4546-8565-68cf8987067a",
+				"method": "GET"
+			},
+			{
+				"id": "bf7b4726-49ad-4d91-81d2-246a3135df94",
+				"method": "GET"
+			}
+		]
+	}
+}
