@@ -75,6 +75,7 @@ public class MemberService {
                 .map(Registration::getTournament)
                 .collect(Collectors.toList());
     }
+
     @Transactional
     public Member create(Member member) {
         if (member.getMembershipStartDate() == null) {

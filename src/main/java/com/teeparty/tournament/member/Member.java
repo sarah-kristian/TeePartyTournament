@@ -1,5 +1,6 @@
 package com.teeparty.tournament.member;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.teeparty.tournament.registration.Registration;
 
 import jakarta.persistence.*;
@@ -24,9 +25,6 @@ public class Member {
     private String phone;
     private LocalDateTime membershipStartDate;
     private LocalDateTime membershipEndDate;
-    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Registration> registeredTournaments;  // List of tournament registrations
-
 
     public Member() {
     }
