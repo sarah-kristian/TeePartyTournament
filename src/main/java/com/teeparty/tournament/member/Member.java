@@ -24,7 +24,7 @@ public class Member {
     private String phone;
     private LocalDateTime membershipStartDate;
     private LocalDateTime membershipEndDate;
-    @OneToMany(mappedBy = "member")
+    @OneToMany(mappedBy = "member", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Registration> registeredTournaments;  // List of tournament registrations
 
 
