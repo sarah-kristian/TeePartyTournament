@@ -1,14 +1,12 @@
 package com.teeparty.tournament.tournament;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
-import com.teeparty.tournament.registration.Registration;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.List;
+
 
 @Setter
 @Getter

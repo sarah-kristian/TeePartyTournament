@@ -6,6 +6,8 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: KeyinSD12
       POSTGRES_DB: tournamentdb
+    ports:
+      - "15432:5432"
 
   tournament:
     build: .
